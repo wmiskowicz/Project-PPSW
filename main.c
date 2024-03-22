@@ -1,9 +1,9 @@
-#include "uart.h"
-#include "servo.h"
-#include "command_decoder.h"
-#include "Interrupts.h"
-#include "watch.h"
-#include "string.h"
+#include "./Includes/uart.h"
+#include "./Includes/servo.h"
+#include "./Includes/command_decoder.h"
+#include "./Includes/Interrupts.h"
+#include "./Includes/watch.h"
+#include "./Includes/string.h"
 
 extern struct Token asToken[MAX_TOKEN_NR];
 extern struct Watch sWatch;

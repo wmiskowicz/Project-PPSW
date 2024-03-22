@@ -398,69 +398,54 @@
               <FilePath>.\Startup.s</FilePath>
             </File>
             <File>
+              <FileName>command_decoder.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Includes\command_decoder.c</FilePath>
+            </File>
+            <File>
+              <FileName>Interrupts.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Includes\Interrupts.c</FilePath>
+            </File>
+            <File>
+              <FileName>led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Includes\led.c</FilePath>
+            </File>
+            <File>
+              <FileName>mian.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Includes\mian.c</FilePath>
+            </File>
+            <File>
+              <FileName>servo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Includes\servo.c</FilePath>
+            </File>
+            <File>
+              <FileName>string.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Includes\string.c</FilePath>
+            </File>
+            <File>
+              <FileName>timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Includes\timer.c</FilePath>
+            </File>
+            <File>
               <FileName>uart.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\uart.c</FilePath>
+              <FilePath>.\Includes\uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>watch.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Includes\watch.c</FilePath>
             </File>
             <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
-            </File>
-            <File>
-              <FileName>led.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\led.c</FilePath>
-            </File>
-            <File>
-              <FileName>led.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\led.h</FilePath>
-            </File>
-            <File>
-              <FileName>Interrupts.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Interrupts.c</FilePath>
-            </File>
-            <File>
-              <FileName>servo.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\servo.c</FilePath>
-            </File>
-            <File>
-              <FileName>Interrupts.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\Interrupts.h</FilePath>
-            </File>
-            <File>
-              <FileName>servo.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\servo.h</FilePath>
-            </File>
-            <File>
-              <FileName>string.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\string.c</FilePath>
-            </File>
-            <File>
-              <FileName>command_decoder.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\command_decoder.c</FilePath>
-            </File>
-            <File>
-              <FileName>timer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\timer.c</FilePath>
-            </File>
-            <File>
-              <FileName>timer.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\timer.h</FilePath>
-            </File>
-            <File>
-              <FileName>watch.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\watch.c</FilePath>
             </File>
           </Files>
         </Group>
