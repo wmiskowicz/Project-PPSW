@@ -17,7 +17,9 @@ It sends through UART communicates:
 
 User can communicate back with the board:
 -calc 0x<num_val> - returns calc 0x<num_val*2>
+
 -callib           - callibrates servo
+
 -goto 0x<num>     - sets position of servo to <num>
 -id               - makes board identify itself
 
