@@ -1,5 +1,4 @@
 #include "watch.h"
-#include "string.h"
 
 
 
@@ -18,30 +17,6 @@ void WatchUpdate(void){
 	sWatch.fSeccondsValueChanged=1;
 }
 
-void ClearMinutesFlag(void){
-	sWatch.fMinutesValueChanged=0;
-}
 
-void ClearSecondsFlag(void){
-	sWatch.fSeccondsValueChanged=0;
-}
 
-unsigned char GetSecondsFlag(void){
-	return sWatch.fSeccondsValueChanged;
-}
 
-unsigned char GetMinutesFlag(void){
-	return sWatch.fMinutesValueChanged;
-}
-
-void CreateMessage(unsigned char ucCtrVal, char cPrefix[], char pcMessage[]){
-	char cCtrValStr[7];
-	char cMessage[13] = "";
-	
-
-	CopyString(cPrefix, cMessage);
-	UIntToHexStr(ucCtrVal, cCtrValStr);
-	AppendString(cCtrValStr, cMessage);
-	CopyString(cMessage, pcMessage);
-	
-}

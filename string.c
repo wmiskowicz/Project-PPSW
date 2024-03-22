@@ -28,14 +28,6 @@ void AppendString (char pcSourceStr[],char pcDestinationStr[]){
 	CopyString(pcSourceStr, pcDestinationStr + ucCharCount);
 }
 
-void ClearString(char pcSourceStr[]){
-	unsigned char ucCharCount;
-	
-	for(ucCharCount = 0; pcSourceStr[ucCharCount] != NULL; ucCharCount++){
-		pcSourceStr[ucCharCount]=0;
-	}
-}
-
 
 void ReplaceCharactersInString(char pcString[],char cOldChar,char cNewChar){
 	unsigned char ucCharCount;
@@ -100,3 +92,14 @@ void UIntToHexStr (unsigned int uiValue, char pcStr[]){
 	}
 }
 
+void CreateMessage(unsigned char ucCtrVal, char cPrefix[], char pcMessage[]){
+	char cCtrValStr[7];
+	char cMessage[13] = "";
+	
+
+	CopyString(cPrefix, cMessage);
+	UIntToHexStr(ucCtrVal, cCtrValStr);
+	AppendString(cCtrValStr, cMessage);
+	CopyString(cMessage, pcMessage);
+	
+}

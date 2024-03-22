@@ -1,6 +1,12 @@
 #define RECIEVER_SIZE 19
 #define TRANSMITER_SIZE 19
 
+struct TransmitterFlags{
+	unsigned char fUnknown;
+	unsigned char fId;
+	unsigned char fCalc;
+};
+
 void UART_InitWithInt(unsigned int uiBaudRate);
 
 enum eRecieverStatus {EMPTY, READY, OVERFLOW};
