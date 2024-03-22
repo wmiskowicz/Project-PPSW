@@ -48,7 +48,7 @@ void Reciever_PutCharacterToBuffer(char cCharacter){
 	else if(cCharacter == TERMINATOR){
 		
 		sRxBuffer.eStatus = READY;
-		sRxBuffer.cData[sRxBuffer.ucCharCtr-1] = NULL;
+		sRxBuffer.cData[sRxBuffer.ucCharCtr] = NULL;
 		sRxBuffer.ucCharCtr = 0;
   }
 	else{
@@ -79,29 +79,32 @@ struct TransmiterBuffer{
 struct TransmiterBuffer sTransmiterBuffer;
 
 char Transmiter_GetCharacterFromBuffer(){
+	char cCurrChar;
 	
-	if(sTransmiterBuffer.cData[sTransmiterBuffer.cCharCtr] != NULL){
-		
-		sTransmiterBuffer.cCharCtr++;
-		sTransmiterBuffer.fLastCharacter = 0;
-		sTransmiterBuffer.eStatus = BUSY;
-		return sTransmiterBuffer.cData[sTransmiterBuffer.cCharCtr-1];
-	}
-	else if(sTransmiterBuffer.fLastCharacter){
+	if(sTransmiterBuffer.fLastCharacter){
 		
 		sTransmiterBuffer.cCharCtr = 0;
+		sTransmiterBuffer.fLastCharacter = 0;
 		sTransmiterBuffer.eStatus = FREE;
 		return NULL;
 	}
-	else{
+	else if(sTransmiterBuffer.cData[sTransmiterBuffer.cCharCtr] == NULL){
+		
 		sTransmiterBuffer.fLastCharacter = 1;
-		return TERMINATOR;		
+		return TERMINATOR;
 	}
+	else{
+		cCurrChar = sTransmiterBuffer.cData[sTransmiterBuffer.cCharCtr];
+		sTransmiterBuffer.cCharCtr++;
+		return cCurrChar;		
+	}
+	
 }
 
 void Transmiter_SendString(char cString[]){
 	
 	CopyString(cString, sTransmiterBuffer.cData);
+	sTransmiterBuffer.eStatus = BUSY;
 	U0THR = Transmiter_GetCharacterFromBuffer();
 }
 

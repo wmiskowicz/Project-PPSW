@@ -6,9 +6,6 @@
 #define mPIN10 1<<10
 
 
-
-
-
 struct Servo{
 	enum ServoState eState;
 	unsigned int uiCurrentPosition;
@@ -107,7 +104,7 @@ void ServoInit(unsigned int uiServoFrequency){
 	unsigned int uiServoPeriod=(1000000/uiServoFrequency);
 	
 	LedInit();
-	Timer0Interrupts_Init(uiServoPeriod, &Automat_servo);
+	Timer1Interrupts_Init(uiServoPeriod, &Automat_servo);
 	ServoCallib();
 }
 

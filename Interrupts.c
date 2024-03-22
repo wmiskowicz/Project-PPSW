@@ -10,7 +10,7 @@
 #define mRESET_ON_MR0     0x00000002
 #define mMR0_INTERRUPT    0x00000001
 
-#define mINTERRUPT_ON_MR1 0x00000040
+#define mINTERRUPT_ON_MR1 0x00000008
 #define mRESET_ON_MR1     0x00000010
 #define mMR1_INTERRUPT    0x00000002
 // VIC (Vector Interrupt Controller) VICIntEnable
@@ -51,7 +51,7 @@ void Timer0Interrupts_Init(unsigned int uiPeriod, void *pvInterruptFunction){ //
 	VICVectAddr2  =(unsigned long)Timer0IRQHandler; 	   // Set to Slot 1 Address of Interrupt Service Routine 
 
   
-	(pvTimer0InterruptFunction)=pvInterruptFunction;
+	pvTimer0InterruptFunction = pvInterruptFunction;
 	
 	
 	
@@ -76,7 +76,7 @@ void Timer1Interrupts_Init(unsigned int uiPeriod, void *pvInterruptFunction){
 	VICVectAddr3  =(unsigned long)Timer1IRQHandler;
 
   
-	(pvTimer1InterruptFunction)=pvInterruptFunction;
+	pvTimer1InterruptFunction = pvInterruptFunction;
 	
 	
 	
